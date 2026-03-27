@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh">
+	<title>Neįdomus puslapis</title>
+	<foreignObject width="20ch" height="100vh" id="leftside">
+		<nav xmlns="http://www.w3.org/1999/xhtml" style="overflow:auto;position:absolute;inset:0"><ul>
+			<li>Neįdomus puslapis</li>
+			<li><a href="neaiškus-varnos-dydžio-paukštis.svg">Neaiškus varnos dydžio paukštis</a></li>
+		</ul></nav>
+	</foreignObject>
+	<foreignObject width="calc(100vw - (8px + 20ch))" height="100vh" x="calc(8px + 20ch)" id="rightside">
+		<main xmlns="http://www.w3.org/1999/xhtml" style="overflow:auto;position:absolute;inset:0;padding-left:1ch">
+			<h1>Neįdomus puslapis</h1>
+			<p>← Pasirink įdomesnį puslapį.</p>
+		</main>
+	</foreignObject>
+
+	<rect width="8px" height="100vh" x="20ch" id="splitclose" fill="grey"/>
+	<rect width="8px" height="100vh" id="splitopen" display="none" fill="grey"/>
+
+	<set href="#leftside" begin="splitclose.click" end="splitopen.click" attributeName="display" to="none"/>
+	<set href="#rightside" begin="splitclose.click" end="splitopen.click" attributeName="class" to="rightsidebig"/><style>.rightsidebig{width:calc(100vw - 8px);x:8px;}</style>
+	<set href="#splitclose" begin="splitclose.click" end="splitopen.click" attributeName="display" to="none"/>
+	<set href="#splitopen" begin="splitclose.click" end="splitopen.click" attributeName="display" to="block"/>
+</svg>
