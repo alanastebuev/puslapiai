@@ -18,7 +18,7 @@
 				<fieldset style="display:grid;max-width:max-content">
 					<legend>Gal žinai kokia tai rūšis?</legend>
 					<textarea name="txt" placeholder="tekstas kurį skaitys saito savininkas" rows="6" cols="40" required=""/>
-					<input type="submit" value="siūsti"/>
+					<input type="submit" value="siųsti"/>
 				</fieldset>
 			</form>
 		</main>
