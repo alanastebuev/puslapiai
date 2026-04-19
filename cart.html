@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="lt">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Krepšelis</title>
+		<style>
+			body{
+				margin:0;
+				display:flex;
+				flex-direction:column;
+				background-color:#eed8c0;
+			}
+			header{
+				display:flex;
+				flex-wrap:wrap;
+				background-color:#dfb585;
+			}
+			.CurrentPage{
+				background-color:#c38c4d;
+				padding:8px;
+			}
+			.OtherPage{
+				outline-offset:-5px;
+				padding:8px;
+			}
+			.Name{
+				padding:8px;
+			}
+			main{
+				display:grid;
+				grid-template-columns:8px minmax(0,160px) 16px minmax(0,max-content) 16px max-content 8px;
+				justify-content:center;
+				padding:8px;
+			}
+			.Thing{
+				grid-column-start:1;
+				grid-column-end:8;
+				outline-offset:-5px;
+				padding:8px 0;
+				display:grid;
+				grid-template-columns:subgrid;
+				align-items:center;
+				text-decoration:none;
+				color:inherit;
+			}
+			.Thing:hover{
+				background-color:#e7c7a7;
+			}
+			.ThingChild1{
+				grid-column-start:2;
+				width:100%;
+				height:auto;
+			}
+			.ThingChild2{
+				grid-column-start:4;
+			}
+			.ThingChild3{
+				grid-column-start:6;
+				text-align:right;
+				font-size:150%;
+			}
+			#Suma{
+				grid-column-start:1;
+				grid-column-end:8;
+				margin:0;
+				display:grid;
+				grid-template-columns:subgrid;
+				text-align:right;
+				font-size:150%;
+				padding:8px 0;
+			}
+			.SumaTxt{
+				grid-column-start:1;
+				grid-column-end:5;
+			}
+			.SumaEur{
+				grid-column-start:6;
+			}
+			.BottomButton{
+				text-align:right;
+				font:inherit;
+				font-size:150%;
+				margin:0;
+				padding:8px;
+				grid-column-start:1;
+				grid-column-end:7;
+				justify-self:end;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<span class="Name">Parduotuvė</span>
+			<a class="OtherPage" href="products.html">Prekės</a>
+			<span class="CurrentPage">Krepšelis</span>
+		</header>
+		<main>
+			<!--https://www.skytech.lt/kid29hduk-kid29hduk-dumu-jutiklis-optinis-detektorius-bevielis-p-665901.html-->
+			<a class="Thing" href="product.html">
+				<img class="ThingChild1" src="images/KID-29HD-UK dūmų jutiklis Optinis detektorius Bevielis.webp" width="160" height="160" alt="">
+				<span class="ThingChild2">KID-29HD-UK dūmų jutiklis Optinis detektorius Bevielis</span>
+				<span class="ThingChild3">21,49 €</span>
+			</a>
+			<!--https://www.lemona.lt/akumuliatorius-18650-3-6v-3450mah-10a-li-ion-molicel-inr-18650-m35a.html-->
+			<a class="Thing" href="product.html">
+				<img class="ThingChild1" src="images/Akumuliatorius 18650 3.6V 3450mAh 10A Li-ion Molicel INR-18650-M35A.webp" width="160" height="160" alt="">
+				<span class="ThingChild2">Akumuliatorius 18650 3.6V 3450mAh 10A Li-ion Molicel INR-18650-M35A</span>
+				<span class="ThingChild3">6,90 €</span>
+			</a>
+			<h1 id="Suma">
+				<span class="SumaTxt">Suma:</span>
+				<span class="SumaEur">28,39 €</span>
+			</h1>
+			<input class="BottomButton" type="button" value="Apmokėti">
+		</main>
+	</body>
+</html>

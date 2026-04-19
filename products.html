@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="lt">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Prekės</title>
+		<style>
+			body{
+				margin:0;
+				display:flex;
+				flex-direction:column;
+				background-color:#eed8c0;
+			}
+			header{
+				display:flex;
+				flex-wrap:wrap;
+				background-color:#dfb585;
+			}
+			.CurrentPage{
+				background-color:#c38c4d;
+				padding:8px;
+			}
+			.OtherPage{
+				outline-offset:-5px;
+				padding:8px;
+			}
+			.Name{
+				padding:8px;
+			}
+			main{
+				display:flex;
+				flex-wrap:wrap;
+				padding:8px;
+			}
+			a.Thing{
+				outline-offset:-5px;
+				padding:8px;
+				display:grid;
+				gap:16px;
+				row-gap:8px;
+				grid-template-columns:max-content minmax(0,1fr);
+				align-content:start;
+				text-decoration:none;
+				color:inherit;
+				width:320px;
+			}
+			a.Thing:hover{
+				background-color:#e7c7a7;
+			}
+			img.Thing{
+				grid-column-start:1;
+				grid-column-end:3;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<span class="Name">Parduotuvė</span>
+			<span class="CurrentPage">Prekės</span>
+			<a class="OtherPage" href="cart.html">Krepšelis</a>
+		</header>
+		<main>
+			<!--https://www.skytech.lt/kid29hduk-kid29hduk-dumu-jutiklis-optinis-detektorius-bevielis-p-665901.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/KID-29HD-UK dūmų jutiklis Optinis detektorius Bevielis.webp" width="320" height="320" alt="">
+				<span>21,49 €</span>
+				<span>KID-29HD-UK dūmų jutiklis Optinis detektorius Bevielis</span>
+			</a>
+			<!--https://www.skytech.lt/k10sco-dvigubas-dumu-anglies-monoksido-detektorius-k10sco-p-699560.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/Dvigubas dūmų ir anglies monoksido detektorius K10SCO.webp" width="320" height="320" alt="">
+				<span>47,19 €</span>
+				<span>Dvigubas dūmų ir anglies monoksido detektorius K10SCO</span>
+			</a>
+			<!--https://www.skytech.lt/ak300524000s-assmann-usb-typec-adapter-type-5gb-version-p-589530.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/ASSMANN USB Type-C adapter type A to C MF 3A 5GB 3.0 Version bl.webp" width="320" height="320" alt="">
+				<span>4,19 €</span>
+				<span lang="en">ASSMANN USB Type-C adapter type A to C M/F 3A 5GB 3.0 Version bl</span>
+			</a>
+			<!--https://www.skytech.lt/ak300506000s-assmann-usb-typec-adapter-type-superspeed-p-498336.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/ASSMANN USB Type-C adapter type C to A MF Super-Speed bl.webp" width="320" height="320" alt="">
+				<span>2,69 €</span>
+				<span lang="en">ASSMANN USB Type-C adapter type C to A M/F Super-Speed bl</span>
+			</a>
+			<!--https://www.lemona.lt/akumuliatorius-21700-3-6v-4200mah-45a-li-ion-molicel-inr-21700-p42a.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/Akumuliatorius 21700 3.6V 4200mAh 45A Li-ion Molicel INR-21700-P42A.webp" width="320" height="320" alt="">
+				<span>7,90 €</span>
+				<span>Akumuliatorius 21700 3.6V 4200mAh 45A Li-ion Molicel INR-21700-P42A</span>
+			</a>
+			<!--https://www.lemona.lt/akumuliatorius-18650-3-6v-3450mah-10a-li-ion-molicel-inr-18650-m35a.html-->
+			<a class="Thing" href="product.html">
+				<img class="Thing" src="images/Akumuliatorius 18650 3.6V 3450mAh 10A Li-ion Molicel INR-18650-M35A.webp" width="320" height="320" alt="">
+				<span>6,90 €</span>
+				<span>Akumuliatorius 18650 3.6V 3450mAh 10A Li-ion Molicel INR-18650-M35A</span>
+			</a>
+		</main>
+	</body>
+</html>
