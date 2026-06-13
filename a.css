@@ -1,0 +1,218 @@
+.tablabels{
+	display:flex;
+	border-bottom:1px solid hsl(0,0%,60%);
+}
+.tablabel{
+	display:grid;
+}
+.tabradio{
+	grid-column:1/2;
+	grid-row:1/2;
+	appearance:none;
+	margin:0;
+	padding:0;
+	background-color:hsl(0,0%,90%);
+	outline-offset:-2px;
+}
+.tabradio:hover{
+	background-color:hsl(0,0%,80%);
+}
+.tabradio:checked{
+	background-color:hsl(0,0%,65%);
+}
+.tabname{
+	grid-column:1/2;
+	grid-row:1/2;
+	padding:4px;
+}
+.tabcontent{
+	display:none;
+}
+.currenttabcontent{
+	display:grid;
+}
+body{
+	margin:0;
+	position:fixed;
+	inset:0;
+	display:grid;
+	grid-template-columns:minmax(0,1fr);
+	grid-template-rows:auto minmax(0,1fr);
+}
+.pokefind{
+	&._root{
+		grid-template-columns:minmax(0,1fr) auto auto;
+		grid-template-rows:auto minmax(0,1fr);
+	}
+	&._result{
+		grid-column:1/4;
+		overflow:auto;
+		display:flex;
+		flex-direction:column;
+		border-top:1px solid hsl(0,0%,60%);
+	}
+	&._cards{
+		display:grid;
+		grid-template-columns:repeat(auto-fill,calc(max(128px,20ch) + 8px));
+		justify-content:space-evenly;
+		gap:8px;
+		padding:8px;
+	}
+	&._text{
+		text-align:center;
+	}
+	&._error{
+		color:red;
+	}
+	&._loadmore{
+		align-self:center;
+		&:disabled{
+			visibility:hidden;
+		}
+	}
+}
+.pokeown{
+	&._root{
+		grid-template-columns:minmax(0,1fr);
+		grid-template-rows:auto auto minmax(0,1fr);
+	}
+	&._stats{
+		display:flex;
+		flex-wrap:wrap;
+		gap:4px;
+		padding: 4px;
+	}
+	&._stat{
+		padding: 2px;
+		background-color:lightgrey;
+		display:flex;
+		flex-wrap:wrap;
+		gap:4px;
+		align-items:center;
+		min-height:calc(1rlh + 4px)
+	}
+	&._cards{
+		display:grid;
+		grid-template-columns:repeat(auto-fill,calc(max(128px,26ch) + 8px));
+		justify-content:space-evenly;
+		gap:8px;
+		padding:8px;
+		align-content:start;
+		overflow:auto;
+		border-top:1px solid hsl(0,0%,60%);
+	}
+}
+.pokecard{
+	&._root{
+		display:grid;
+		grid-template-columns:minmax(0,1fr);
+		grid-template-rows:auto 1fr auto auto auto;
+		gap:4px;
+		padding:4px;
+		background-color:hsl(0,0%,90%);
+	}
+	&._hidden{
+		display:none;
+	}
+	&._name{
+		text-align:center;
+	}
+	&._sprite{
+		height:128px;
+		justify-self:stretch;
+		align-self:center;
+		object-fit:contain;
+	}
+	&._types{
+		display:flex;
+		flex-wrap:wrap;
+		gap:4px;
+	}
+	&._stats{
+		align-self:start;
+		justify-self:start;
+		display:grid;
+		grid-template-columns:3ch auto;
+		column-gap:4px;
+	}
+	&._plusbuttons{
+		grid-template-columns:3ch auto auto;
+	}
+	&._plusbutton{
+		padding:0;
+		font:initial;
+		line-height:0;
+		box-sizing:border-box;
+		width:1rlh;
+		height:1rlh;
+		visibility:hidden;
+	}
+	&._can_upgrade>._plusbutton{
+		visibility:visible;
+	}
+	&._stat{
+		text-align:end;
+	}
+	&._upgraded{
+		color:green;
+	}
+	&._catch{
+		justify-self:start;
+	}
+	&._own{
+		display:grid;
+		grid-template-columns:auto minmax(0,1fr);
+		gap:4px;
+		align-items:center;
+	}
+}
+.poketype{
+	padding:2px;
+}
+.pokedialog{
+	&._root{
+		display:grid;
+		grid-template-columns:auto auto;
+		grid-template-areas:
+			'name name'
+			'sprite wh'
+			'types types'
+			'stats stats';
+		padding:14px;
+		gap:4px;
+		border:2px solid black;
+		box-sizing:border-box;
+		max-width:calc(100% - 8px);
+		max-height:calc(100% - 8px);
+	}
+	&._name{
+		grid-area:name;
+	}
+	&._sprite{
+		grid-area:sprite;
+		width:128px;
+		height:128px;
+	}
+	&._whs{
+		grid-area:wh;
+		display:grid;
+		align-content:center;
+		grid-template-columns:auto auto;
+		column-gap:4px;
+	}
+	&._wh{
+		text-align:right;
+	}
+	&._types{
+		grid-area:types;
+	}
+	&._stats{
+		grid-area:stats;
+	}
+	&._stats{
+		grid-template-columns:auto auto;
+	}
+	&._dialogplus{
+		grid-template-columns:auto auto auto;
+	}
+}
