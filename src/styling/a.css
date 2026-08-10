@@ -1,0 +1,63 @@
+body{
+	padding:initial;
+	margin:initial;
+}
+
+
+.LastErrorBox{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:0;
+	display:flex;
+	container-type:size;
+}
+.LastErrorBox>*{
+	translate:round(to-zero,50cqw - 50%,1px) 32px;
+	border:8px solid;
+	border-image:var(--ErrorBoxBorder) 8 fill;
+	height:max-content;
+	display:grid;
+	grid-auto-flow:column;
+	align-items:center;
+	gap:4px;
+}
+.LastErrorBox>*>*{
+	margin:initial;
+	padding:initial;
+	border:initial;
+	width:24px;
+	height:24px;
+	background:no-repeat 0 0 var(--X);
+}
+.LastErrorBox>*>:hover{
+	background-position-y:-24px;
+}
+.LastErrorBox>*>:active{
+	background-position-y:-48px;
+}
+
+
+.RecipeCards{
+	display:grid;
+	grid-template-columns:repeat(auto-fill,minmax(min(max(round(to-zero,30ch,1px),200px),100%),1fr));
+	padding:16px;
+	gap:16px;
+}
+.RecipeCards>*{
+	display:grid;
+	grid-template-rows:subgrid;
+	grid-row-end:span 4;
+	gap:4px;
+}
+.RecipeCards>:hover{
+	background-color:var(--CardColor);
+	box-shadow:0 0 0 8px var(--CardColor);
+}
+.RecipeCards>*>img{
+	width:100%;
+	aspect-ratio:1;
+	object-fit:contain;
+	contain:strict;/*without this cards are very tall in firefox*/
+}
